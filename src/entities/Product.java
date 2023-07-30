@@ -12,12 +12,13 @@ public class Product {
 		return value;
 	}
 	
-	public void addProducts(int quantityToAdd) {
-		quantity += quantityToAdd;		
+	public void addProducts(int quantity) {
+		this.quantity += quantity;		
 	}
 	
-	public void removeProducts(int quantityToRemove) {
-		quantity -= quantityToRemove;
+	public void removeProducts(int quantity) {
+		this.quantity -= quantity;
 	}
+
 
 }
