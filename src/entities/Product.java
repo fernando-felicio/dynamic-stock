@@ -21,7 +21,12 @@ public class Product {
 	}
 	
 	public String toString() {
-		return name + ", R$" + String.format("%.2f", price) + ", " + quantity + " units, Total: R$" + String.format("%.2f", totalValueInStock());
+		return name +
+				", R$" +
+				String.format("%.2f", price) +
+				", " + quantity +
+				" units, Total: R$" +
+				String.format("%.2f", totalValueInStock());
 	}
 
 
