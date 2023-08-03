@@ -2,10 +2,17 @@ package entities;
 
 public class Product {
 	
-	//Declarando os atributos da calsse Product
+	//Declarando os atributos da classe Product
 	public String name;
 	public double price;
 	public int quantity;
+	
+	//Criando construtor 
+	public Product(String name, double price, int quantity) {
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+	}
 	
 	public double totalValueInStock() {
 		double value = price * quantity;
