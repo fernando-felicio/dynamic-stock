@@ -7,11 +7,23 @@ public class Product {
 	public double price;
 	public int quantity;
 	
+	//Disponibilizando construtor padrão
+	public Product() {
+		
+	}
+	
 	//Criando construtor 
 	public Product(String name, double price, int quantity) {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
+	}
+	
+	//Sobrecarga do construtor
+	public Product(String name, double price) {
+		this.name= name;
+		this.price = price;
+		
 	}
 	
 	public double totalValueInStock() {

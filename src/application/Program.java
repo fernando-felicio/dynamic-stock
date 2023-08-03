@@ -11,22 +11,18 @@ public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
-		//Declarando variavel composta
-		Product product = new Product();
 				
 		// Recebendo os inputs do usuário
 
 		System.out.printf("Enter product information:%n==================%n");
 
 		System.out.println("Product's name: ");
-		product.name = sc.nextLine();
+		String name = sc.nextLine();
 		
 		System.out.println("Price of the product: R$");
-		product.price = sc.nextDouble();
-
-		System.out.println("Amount: ");
-		product.quantity = sc.nextInt();
+		double price = sc.nextDouble();
+		
+		Product product = new Product(name, price);
 				
 
 		// Retornando os dados do estoque após input
@@ -50,6 +46,7 @@ public class Program {
 		
 		// Retornando os dados do estoque após remoção de itens
 		System.out.println("Product data: " + product);
+		System.out.println();
 
 		sc.close();
 
