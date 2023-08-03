@@ -3,9 +3,9 @@ package entities;
 public class Product {
 	
 	//Declarando os atributos da classe Product
-	public String name;
-	public double price;
-	public int quantity;
+	private String name;
+	private double price;
+	private int quantity;
 	
 	//Disponibilizando construtor padrão
 	public Product() {
@@ -24,6 +24,30 @@ public class Product {
 		this.name= name;
 		this.price = price;
 		
+	}
+	
+	//Por convenção, os metodos Getters e Setters são adicionados logo após os construtores
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setPrice(double price) {
+		this.price =price;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
+	
+	//A quantidade de produtos somente será alterada em estoque quando houver uma entrada ou saída no estpque
+	//O metodo getQuantity é uma regra de negócio que protege a integridade do objeto Produto
+	public int getQuantity() {
+		return quantity;
 	}
 	
 	public double totalValueInStock() {
